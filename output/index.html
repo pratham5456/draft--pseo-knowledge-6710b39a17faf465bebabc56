@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CybeGloss - Your Cybersecurity Glossary</title>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CybeGloss - Your Cybersecurity Glossary</title>
+<link rel="icon" type="image/x-icon" href="https://examplecompany.com/images/favicon.ico">
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+
+<style>
+    :root {
+        --primary-color: #6a4dff;
+        --secondary-color: #f3f4f6;
+        --background-color: #ffffff;
+        --text-color: #111827;
+        --accent-color: #fbbf24;
+        --font-primary: Inter, Arial, sans-serif;
+        --font-secondary: Poppins, Arial, sans-serif;
+    }
+
+    /* General styles */
+    body {
+        font-family: var(--font-primary);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: var(--font-secondary);
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .grow-btn {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* Alphabet navigation */
+    .alphabet-nav {
+        position: sticky;
+        top: 60px;
+        background-color: var(--secondary-color);
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .alphabet-nav a {
+        margin: 2px;
+        text-decoration: none;
+        color: var(--primary-color);
+        flex: 0 0 auto;
+    }
+
+    /* Main content */
+    main {
+        flex-grow: 1;
+        padding: 2rem 0;
+    }
+
+    .category-section {
+        margin-bottom: 30px;
+    }
+
+    /* Search container */
+    #search-container {
+        margin-bottom: 20px;
+    }
+
+    #search-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid var(--secondary-color);
+    }
+
+    #search-results {
+        margin-top: 10px;
+    }
+
+    /* Typography */
+    h1, h2 {
+        color: var(--primary-color);
+        font-family: var(--font-secondary);
+    }
+
+    /* List styles */
+    .homeMain ul {
+        padding-left: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .homeMain ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .homeMain ul li a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 5px;
+        text-underline-offset: 2px;
+    }
+
+    /* Link styles */
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .alphabet-nav {
+            top: 58px;
+        }
+
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+    <div class="logo"><a href="/"><img src="https://examplecompany.com/images/logo.svg" /></a></div>
+    <nav>
+        <a href="https://examplecompany.com/">Home</a>
+    </nav>
+    <a class="grow-btn" href="https://examplecompany.com/auth">Get Started</a>
+</header>
+    <main class="homeMain">
+        <h1>CyberSecurity Glossary</h1>
+        <p>A comprehensive resource for cybersecurity definitions and concepts.</p>
+
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for terms...">
+            <div id="search-results"></div>
+        </div>
+
+        <div id="content">
+            
+                
+                    <h2><a href="draft-pseo-knowledge">Draft: PSEO Knowledge</a></h2>
+                    <ul>
+                        
+                            <li><a href="/draft-pseo-knowledge/">Draft: PSEO Knowledge</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="overview-of-pseo-post-secondary-enrollment-options">Overview of PSEO (Post-Secondary Enrollment Options)</a></h2>
+                    <ul>
+                        
+                            <li><a href="/overview-of-pseo-post-secondary-enrollment-options/">Overview of PSEO (Post-Secondary Enrollment Options)</a></li>
+                        
+                            <li><a href="/definition-of-pseo/">Definition of PSEO</a></li>
+                        
+                            <li><a href="/history-of-pseo-programs/">History of PSEO programs</a></li>
+                        
+                            <li><a href="/eligibility-criteria-for-pseo/">Eligibility criteria for PSEO</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="benefits-of-pseo">Benefits of PSEO</a></h2>
+                    <ul>
+                        
+                            <li><a href="/benefits-of-pseo/">Benefits of PSEO</a></li>
+                        
+                            <li><a href="/academic-advantages/">Academic advantages</a></li>
+                        
+                            <li><a href="/cost-savings/">Cost savings</a></li>
+                        
+                            <li><a href="/college-readiness-and-transition/">College readiness and transition</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="challenges-and-considerations">Challenges and Considerations</a></h2>
+                    <ul>
+                        
+                            <li><a href="/challenges-and-considerations/">Challenges and Considerations</a></li>
+                        
+                            <li><a href="/academic-workload-and-balancing/">Academic workload and balancing</a></li>
+                        
+                            <li><a href="/transportation-issues/">Transportation issues</a></li>
+                        
+                            <li><a href="/social-adjustments/">Social adjustments</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="application-process-for-pseo">Application Process for PSEO</a></h2>
+                    <ul>
+                        
+                            <li><a href="/application-process-for-pseo/">Application Process for PSEO</a></li>
+                        
+                            <li><a href="/steps-to-apply/">Steps to apply</a></li>
+                        
+                            <li><a href="/important-deadlines/">Important deadlines</a></li>
+                        
+                            <li><a href="/required-documentation/">Required documentation</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="pseo-course-options">PSEO Course Options</a></h2>
+                    <ul>
+                        
+                            <li><a href="/pseo-course-options/">PSEO Course Options</a></li>
+                        
+                            <li><a href="/types-of-courses-available/">Types of courses available</a></li>
+                        
+                            <li><a href="/credit-transfer-policies/">Credit transfer policies</a></li>
+                        
+                            <li><a href="/online-vs-in-person-courses/">Online vs. in-person courses</a></li>
+                        
+                    </ul>
+                
+            
+    </div>
+    </main>
+    <footer>
+    <div class="logo">
+        <a href="/">
+            <img src="https://examplecompany.com/images/logo.svg" alt="{{ProjectName}} Logo" />
+        </a>
+    </div>
+    <div class="footer-content">
+        <div class="copyright">
+            © Copyright 2022 - 2023 company.
+        </div>
+        <nav class="footer-nav">
+            <a href="https://examplecompany.com/">Home</a>
+            
+                
+                    <a href="https://twitter.com/examplecompany" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                
+                    <a href="https://www.linkedin.com/company/examplecompany" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                
+                    <a href="https://www.instagram.com/example_company/" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                
+            
+        </nav>
+    </div>
+</footer>
+    <script>
+        // Prepare data for Fuse.js
+        const searchData = [
+            
+                
+                    {
+                        title: 'Draft: PSEO Knowledge',
+                        category: 'Draft: PSEO Knowledge',
+                        url: '/draft-pseo-knowledge/',
+                        content: 'Welcome to our comprehensive guide on &#34;Draft: PSEO Knowledge,&#34; where we unravel the intricacies of Post-Secondary Enrollment Options (PSEO) for high school students. This resource is designed to empower students and parents with essential information about the PSEO program, including eligibility criteria, application processes, and the benefits of earning college credits while still in high school. Whether you&#39;re a student considering dual enrollment or a parent seeking the best educational pathways for your child, our detailed insights will help you navigate the PSEO landscape with confidence. Dive in to discover how PSEO can enhance academic success and open doors to future opportunities!'
+                    },
+                
+            
+                
+                    {
+                        title: 'Overview of PSEO (Post-Secondary Enrollment Options)',
+                        category: 'Overview of PSEO (Post-Secondary Enrollment Options)',
+                        url: '/overview-of-pseo-post-secondary-enrollment-options/',
+                        content: 'Welcome to our comprehensive guide on Post-Secondary Enrollment Options (PSEO), an innovative program designed to empower high school students to earn college credits while still in their secondary education. In this overview, we’ll delve into the benefits of PSEO, eligibility requirements, the application process, and how this unique opportunity can pave the way for enhanced academic and career prospects. Whether you&#39;re a student, parent, or educator, our insights will help you navigate the PSEO landscape, making informed decisions about early college enrollment and maximizing educational opportunities. Join us as we explore the transformative power of PSEO and its role in shaping the future of education!'
+                    },
+                
+                    {
+                        title: 'Definition of PSEO',
+                        category: 'Overview of PSEO (Post-Secondary Enrollment Options)',
+                        url: '/definition-of-pseo/',
+                        content: 'Welcome to our comprehensive guide on the Definition of PSEO (Post-Secondary Enrollment Options), where we explore the exciting opportunities available for high school students seeking to earn college credits while still in school. PSEO is a unique program that allows eligible students to enroll in college courses, giving them a head start on their higher education journey. In this overview, you&#39;ll discover the key benefits of PSEO, eligibility requirements, and how it can enhance your academic experience and future career prospects. Whether you&#39;re a student, parent, or educator, this page will equip you with essential insights into Post-Secondary Enrollment Options and how they can pave the way for a successful transition to college.'
+                    },
+                
+                    {
+                        title: 'History of PSEO programs',
+                        category: 'Overview of PSEO (Post-Secondary Enrollment Options)',
+                        url: '/history-of-pseo-programs/',
+                        content: 'Welcome to our comprehensive overview of the History of Post-Secondary Enrollment Options (PSEO) programs, a transformative initiative that bridges the gap between high school and college education. Designed to provide students with the opportunity to earn college credits while still in high school, PSEO programs have evolved significantly since their inception. In this page, you will explore the origins of PSEO, its impact on educational access, and how it has shaped the academic landscape for countless students. Discover the key milestones, legislative changes, and the ongoing benefits of PSEO programs as we delve into this essential educational pathway. Whether you’re a student, parent, or educator, this guide will equip you with valuable insights and information on how PSEO can enhance learning and future opportunities.'
+                    },
+                
+                    {
+                        title: 'Eligibility criteria for PSEO',
+                        category: 'Overview of PSEO (Post-Secondary Enrollment Options)',
+                        url: '/eligibility-criteria-for-pseo/',
+                        content: 'Welcome to our comprehensive guide on the eligibility criteria for Post-Secondary Enrollment Options (PSEO), a program designed to empower high school students to earn college credits while still in school. PSEO provides an invaluable opportunity for motivated students to experience college-level coursework, enhance their academic profiles, and potentially save on future college tuition costs. In this article, we will delve into the specific eligibility requirements, application processes, and benefits of participating in PSEO, ensuring you have all the information needed to make informed decisions about your educational journey. Whether you&#39;re a student, parent, or educator, understanding these criteria is crucial for unlocking the doors to advanced learning opportunities.'
+                    },
+                
+            
+                
+                    {
+                        title: 'Benefits of PSEO',
+                        category: 'Benefits of PSEO',
+                        url: '/benefits-of-pseo/',
+                        content: 'Welcome to our comprehensive guide on the **Benefits of Post-Secondary Enrollment Options (PSEO)**, where we delve into the transformative advantages of this innovative educational program. Designed for high school students seeking to enrich their academic experience, PSEO allows learners to earn college credits while still in high school, fostering both academic rigor and personal growth. In this article, you’ll discover how PSEO can enhance your educational journey, provide significant cost savings, and open doors to advanced opportunities in higher education. Whether you&#39;re a student, parent, or educator, understanding the benefits of PSEO is the key to maximizing your learning potential and preparing for a successful future.'
+                    },
+                
+                    {
+                        title: 'Academic advantages',
+                        category: 'Benefits of PSEO',
+                        url: '/academic-advantages/',
+                        content: 'Unlocking academic advantages through Post-Secondary Enrollment Options (PSEO) can be a game-changer for motivated high school students seeking to elevate their educational journey. This webpage explores the myriad benefits of PSEO, including enhanced college readiness, access to advanced coursework, and the opportunity to earn college credits while still in high school. Discover how PSEO not only fosters academic growth but also paves the way for a successful transition into higher education, equipping students with the skills and confidence they need to thrive. Join us as we delve into the transformative impact of PSEO on student success and future career opportunities!'
+                    },
+                
+                    {
+                        title: 'Cost savings',
+                        category: 'Benefits of PSEO',
+                        url: '/cost-savings/',
+                        content: 'Discover the significant cost savings associated with Post-Secondary Enrollment Options (PSEO) and how this innovative program can benefit both students and families. On this page, we delve into the financial advantages of PSEO, highlighting how it allows high school students to earn college credits without the hefty tuition fees. Learn how participating in PSEO can reduce the overall cost of higher education, enhance career readiness, and provide students with a competitive edge—all while maximizing educational opportunities. Join us as we explore the transformative impact of PSEO on your educational journey and financial future!'
+                    },
+                
+                    {
+                        title: 'College readiness and transition',
+                        category: 'Benefits of PSEO',
+                        url: '/college-readiness-and-transition/',
+                        content: 'Welcome to our comprehensive guide on &#34;College Readiness and Transition&#34; through the benefits of Post-Secondary Enrollment Options (PSEO). As students embark on their educational journeys, understanding how PSEO can enhance college readiness is crucial for academic success. This page will explore the myriad advantages of participating in PSEO programs, including gaining college credits while still in high school, developing essential skills for academic and personal success, and easing the transition to higher education. Discover how PSEO not only prepares students for college coursework but also fosters independence, critical thinking, and a competitive edge in today’s educational landscape. Join us as we delve into the transformative impact of PSEO on students&#39; futures!'
+                    },
+                
+            
+                
+                    {
+                        title: 'Challenges and Considerations',
+                        category: 'Challenges and Considerations',
+                        url: '/challenges-and-considerations/',
+                        content: 'Welcome to our comprehensive guide on the &#34;Challenges and Considerations&#34; surrounding Post-Secondary Enrollment Options (PSEO) knowledge. As students and educators navigate the complexities of PSEO programs, understanding the potential hurdles—such as academic readiness, logistical coordination, and balancing school responsibilities—becomes crucial. This page delves into the key challenges faced by students, parents, and institutions, while also offering valuable insights and strategies to effectively address these issues. Whether you&#39;re a high school student contemplating PSEO or an educator seeking to support your students, our resources will equip you with the information you need to make informed decisions and maximize the benefits of PSEO enrollment.'
+                    },
+                
+                    {
+                        title: 'Academic workload and balancing',
+                        category: 'Challenges and Considerations',
+                        url: '/academic-workload-and-balancing/',
+                        content: 'Navigating the complexities of academic workload and balancing various responsibilities is a challenge faced by students at all levels. This webpage delves into the critical considerations and strategies for effectively managing your academic commitments while maintaining mental well-being and personal life balance. From understanding the impact of heavy coursework and deadlines to exploring practical tips for time management and stress reduction, you&#39;ll discover valuable insights that empower you to thrive academically. Join us as we unpack the challenges of academic life and provide actionable solutions to help you achieve success without sacrificing your health or happiness.'
+                    },
+                
+                    {
+                        title: 'Transportation issues',
+                        category: 'Challenges and Considerations',
+                        url: '/transportation-issues/',
+                        content: 'Welcome to our comprehensive guide on transportation issues, where we delve into the myriad challenges and considerations shaping modern mobility. From traffic congestion and public transit inefficiencies to environmental impacts and infrastructure deficiencies, understanding these pressing concerns is crucial for policymakers, urban planners, and commuters alike. Explore how economic factors, technological advancements, and social equity play pivotal roles in transportation systems worldwide. Join us as we unpack the complexities of transportation issues and discover actionable insights to foster sustainable solutions for the future.'
+                    },
+                
+                    {
+                        title: 'Social adjustments',
+                        category: 'Challenges and Considerations',
+                        url: '/social-adjustments/',
+                        content: 'Welcome to our comprehensive guide on &#34;Social Adjustments: Challenges and Considerations,&#34; where we delve into the complexities of adapting to new social environments and relationships. Whether you&#39;re navigating the intricacies of moving to a new city, transitioning to a different cultural setting, or adjusting to significant life changes, understanding the psychological and emotional hurdles is crucial. This page will explore common challenges such as social anxiety, communication barriers, and the impact of cultural differences, while offering practical strategies to overcome these obstacles. Join us as we equip you with valuable insights and tools to enhance your social adaptability and foster meaningful connections in any context.'
+                    },
+                
+            
+                
+                    {
+                        title: 'Application Process for PSEO',
+                        category: 'Application Process for PSEO',
+                        url: '/application-process-for-pseo/',
+                        content: 'Welcome to our comprehensive guide on the Application Process for Post-Secondary Enrollment Options (PSEO), an invaluable program that allows high school students to earn college credits while still in school. In this resource, you will discover essential steps to navigate the PSEO application process, including eligibility requirements, necessary documentation, and tips for a successful application. Whether you’re a student eager to enhance your educational journey or a parent seeking the best opportunities for your child, our insights will equip you with the knowledge you need to make informed decisions about participating in PSEO. Dive in to unlock the potential of dual enrollment and set the stage for a brighter academic future!'
+                    },
+                
+                    {
+                        title: 'Steps to apply',
+                        category: 'Application Process for PSEO',
+                        url: '/steps-to-apply/',
+                        content: 'Welcome to our comprehensive guide on the &#34;Steps to Apply&#34; for Post-Secondary Enrollment Options (PSEO). Whether you’re a high school student eager to earn college credits or a parent looking to navigate the application process, this page is designed to simplify your journey. Here, you&#39;ll find detailed steps outlining how to apply for PSEO, including eligibility requirements, necessary documents, and tips for a successful application. Discover how to take advantage of this incredible opportunity to accelerate your education and gain valuable experience while still in high school. Let&#39;s embark on this exciting path together!'
+                    },
+                
+                    {
+                        title: 'Important deadlines',
+                        category: 'Application Process for PSEO',
+                        url: '/important-deadlines/',
+                        content: 'Welcome to our comprehensive guide on important deadlines for the Post-Secondary Enrollment Options (PSEO) application process! Navigating the PSEO requirements can be daunting, but understanding key dates is crucial for a smooth transition into advanced academic opportunities. In this page, you&#39;ll discover essential deadlines for application submissions, eligibility verification, and course registration, ensuring you never miss a critical step. Whether you’re a high school student eager to earn college credits or a parent supporting your child’s educational journey, our insights will equip you with the knowledge needed to successfully manage the PSEO timeline and maximize your opportunities.'
+                    },
+                
+                    {
+                        title: 'Required documentation',
+                        category: 'Application Process for PSEO',
+                        url: '/required-documentation/',
+                        content: 'Welcome to our comprehensive guide on the required documentation for the Post-Secondary Enrollment Options (PSEO) application process! Navigating the PSEO landscape can be challenging, but understanding the necessary paperwork is the first step toward unlocking dual enrollment opportunities for high school students. In this section, we’ll break down the essential documents you’ll need, including transcripts, recommendation letters, and consent forms, while providing tips to streamline your application. Whether you&#39;re a student eager to earn college credits or a parent seeking guidance, this resource will equip you with all the information you need to successfully complete your PSEO application.'
+                    },
+                
+            
+                
+                    {
+                        title: 'PSEO Course Options',
+                        category: 'PSEO Course Options',
+                        url: '/pseo-course-options/',
+                        content: 'Welcome to our comprehensive guide on PSEO (Post-Secondary Enrollment Options) Course Options, where high school students can earn college credit while still in school! This page dives into the various opportunities available through PSEO, including eligibility requirements, participating colleges, and the types of courses you can take. Whether you&#39;re a student eager to accelerate your education or a parent seeking the best options for your child’s future, you&#39;ll find valuable insights and resources to enhance your understanding of PSEO programs. Discover how PSEO can pave the way for academic success, save on college costs, and provide a head start on your higher education journey!'
+                    },
+                
+                    {
+                        title: 'Types of courses available',
+                        category: 'PSEO Course Options',
+                        url: '/types-of-courses-available/',
+                        content: 'Welcome to our comprehensive guide on the **types of courses available** through **Post-Secondary Enrollment Options (PSEO)**! If you&#39;re a high school student looking to earn college credits while still in school, you&#39;ve come to the right place. This page will explore the diverse array of PSEO courses, including academic, vocational, and online options, designed to enhance your educational journey and prepare you for future success. Whether you&#39;re interested in STEM, the arts, or career-focused training, our in-depth overview will help you navigate the exciting possibilities that PSEO offers, empowering you to make informed decisions about your educational path. Join us as we delve into the various course types and discover how PSEO can set you on the road to achievement!'
+                    },
+                
+                    {
+                        title: 'Credit transfer policies',
+                        category: 'PSEO Course Options',
+                        url: '/credit-transfer-policies/',
+                        content: 'Welcome to our comprehensive guide on credit transfer policies for Post-Secondary Enrollment Options (PSEO)! If you&#39;re a high school student or parent navigating the exciting world of dual credit courses, understanding how credit transfer works is essential. This page will explore key credit transfer policies, eligibility requirements, and how to maximize your educational opportunities through PSEO. Discover how to ensure that your hard-earned credits seamlessly apply to your future college or university, helping you save time and money on your academic journey. Let’s dive in and unlock the potential of PSEO courses together!'
+                    },
+                
+                    {
+                        title: 'Online vs. in-person courses',
+                        category: 'PSEO Course Options',
+                        url: '/online-vs-in-person-courses/',
+                        content: 'In the evolving landscape of education, the choice between online and in-person courses has become a pivotal decision for students exploring Post-Secondary Enrollment Options (PSEO). This comprehensive guide delves into the advantages and challenges of both learning formats, helping students and parents understand how each can impact academic success, flexibility, and social interaction. Whether you&#39;re considering remote learning&#39;s convenience or the immersive experience of traditional classrooms, this page will equip you with essential insights to make an informed choice for your PSEO journey. Join us as we explore key factors such as curriculum quality, interaction opportunities, and overall student engagement to help you find the right fit for your educational aspirations.'
+                    },
+                
+            
+        ];
+
+        // Initialize Fuse with the search data
+        const fuse = new Fuse(searchData, {
+            keys: ['title', 'category', 'content'],
+            threshold: 0.3,
+            includeScore: true
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const content = document.getElementById('content');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value;
+            if (query.length > 2) {
+                const results = fuse.search(query);
+                displayResults(results);
+            } else {
+                searchResults.innerHTML = '';
+                content.style.display = 'block';
+            }
+        });
+
+        function displayResults(results) {
+            if (results.length === 0) {
+                searchResults.innerHTML = '<p>No results found.</p>';
+                content.style.display = 'none';
+                return;
+            }
+
+            let html = '<ul>';
+            results.forEach(result => {
+                html += `<li><a href="${result.item.url}">${result.item.title}</a> (${result.item.category})</li>`;
+            });
+            html += '</ul>';
+
+            searchResults.innerHTML = html;
+            content.style.display = 'none';
+        }
+
+        // Smooth scrolling for alphabet navigation
+        document.querySelectorAll('.alphabet-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
